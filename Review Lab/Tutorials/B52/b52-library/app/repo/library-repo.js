@@ -36,12 +36,20 @@ class LibraryRepo {
 
     // Get all authors
     async getAllAuthors() {
-        return await prisma.author.findMany()
+        return await prisma.author.findMany({
+            include: { books: true }
+        })
     }
 
+    // http://localhost:3000/books?authorid = 1
+    // http://localhost:3000/books/1 [id]
     // Get a specific author by ID
     async getAuthorById(authorId) {
-        return await prisma.author.findUnique({ where: { id: parseInt(authorId) } })
+        return await prisma.author.findUnique(
+            {
+                where: { id: parseInt(authorId) },
+                include: { books: true }
+            })
     }
 
     // Create a new author
