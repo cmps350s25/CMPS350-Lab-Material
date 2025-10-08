@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meal Summary</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
+
 <body>
   <nav>
     <a href="../index.html">Home</a>
@@ -15,19 +17,23 @@
   </nav>
   <div class="container">
     <h1>Meal Summary</h1>
-    <p>Summary of meals grouped by tags.</p>
-    <table class="summary-table">
-      <thead>
-        <tr>
-          <th>Tag</th>
-          <th>Total Meals</th>
-          <th>Avg Satisfaction</th>
-        </tr>
-      </thead>
-      <tbody id="summary-body"></tbody>
-    </table>
+    <p class="summary-description">Overview of your meals grouped by tags, showing total meals and average satisfaction
+      ratings.</p>
+    <div class="table-container">
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="tag">Tag</th>
+            <th class="sortable" data-sort="count">Total Meals</th>
+            <th class="sortable" data-sort="rating">Average Satisfaction</th>
+          </tr>
+        </thead>
+        <tbody id="summary-body"></tbody>
+      </table>
+    </div>
   </div>
   <footer>NutriSnap © 2025</footer>
   <script src="../js/summary.js"></script>
 </body>
+
 </html>

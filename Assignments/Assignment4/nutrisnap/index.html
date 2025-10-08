@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NutriSnap - Home</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
@@ -16,7 +17,13 @@
   </nav>
   <div class="container">
     <h1>NutriSnap - Smart Meal Tracker</h1>
-    <input type="text" id="search" placeholder="Search meals..." class="search-box" />
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search meals..." class="search-box" />
+      <input type="date" id="dateFilter" class="filter-control" />
+      <select id="tagFilter" class="filter-control">
+        <option value="">All Tags</option>
+      </select>
+    </div>
     <div id="meals-list"></div>
   </div>
   <footer>NutriSnap © 2025. Built with 💚 for Health & Simplicity.</footer>
